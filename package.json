@@ -1,0 +1,36 @@
+{
+  "name": "reed-koa-static",
+  "version": "1.0.0",
+  "description": "rule based koa static file server middleware",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "koa-sendfile": "^2.0.1"
+  },
+  "devDependencies": {
+    "koa": "^2.10.0",
+    "mocha": "^6.2.2",
+    "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HansHuang/Reed-Koa-Static.git"
+  },
+  "keywords": [
+    "reed",
+    "koa",
+    "static",
+    "middleware"
+  ],
+  "author": "HansHuang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HansHuang/Reed-Koa-Static/issues"
+  },
+  "homepage": "https://github.com/HansHuang/Reed-Koa-Static#readme"
+}

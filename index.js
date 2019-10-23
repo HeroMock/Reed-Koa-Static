@@ -4,12 +4,12 @@ const path = require('path'),
     send = require('koa-sendfile')
 
 
-
-function serveStatic({ urlPrefix, dirPath, indexPage }) {
+module.exports = function serveStatic({ urlPrefix, dirPath, indexPages }) {
     return async (ctx, next) => {
 
         let filePath = ctx.path
         if (urlPrefix) {
+            urlPrefix = '/' + urlPrefix.replace(/^\//, '').replace(/\/$/, '')
             filePath = filePath.replace(RegExp(`^${urlPrefix}`), '')
         }
 
@@ -22,11 +22,11 @@ function serveStatic({ urlPrefix, dirPath, indexPage }) {
 
         } else if (stats && stats.isDirectory()) {
 
-            if (!indexPage || !indexPage.length) {
-                indexPage = ['index.html', 'index.htm']
+            if (!indexPages || !indexPages.length) {
+                indexPages = ['index.html', 'index.htm']
             }
 
-            let indexPaths = indexPage.map(s => path.join(fullPath, s)),
+            let indexPaths = indexPages.map(s => path.join(fullPath, s)),
                 indexFile = indexPaths.find(async s => {
                     let indexStats = await promisify(fs.stat)(s)
                     return indexStats && indexStats.isFile()
