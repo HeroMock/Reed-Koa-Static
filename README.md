@@ -6,7 +6,7 @@ Rule based koa static file server middleware
 
 ```js
 
-    const static = require('eed-koa-static')
+    const static = require('reed-koa-static')
 
     const app = new Koa()
 
@@ -27,8 +27,8 @@ Rule based koa static file server middleware
 
 ## Options
 
-__urlPrefix__: _Optional_ Set the URL path prefix 
+__urlPrefix__: _[Optional]_ Set the URL path prefix 
 
-__dirPath__: _Required_ Dir path to the static files
+__dirPath__: _[Required]_ Dir path to the static files
 
-__indexPages__: _Optional_ Set the index page array, default value is `['index.html', 'index.htm']`
+__indexPages__: _[Optional]_ Set the index page array, default value is `['index.html', 'index.htm']`
