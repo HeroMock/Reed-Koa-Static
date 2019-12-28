@@ -1,6 +1,6 @@
 {
   "name": "reed-koa-static",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rule based koa static file server middleware",
   "main": "index.js",
   "directories": {
