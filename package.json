@@ -7,12 +7,12 @@
     "test": "test"
   },
   "dependencies": {
-    "koa-sendfile": "^2.0.1"
+    "@koa/send": "^6.0.0"
   },
   "devDependencies": {
-    "koa": "^2.10.0",
-    "mocha": "^6.2.2",
-    "supertest": "^4.0.2"
+    "koa": "^2.16.0",
+    "mocha": "^11.1.0",
+    "supertest": "^7.1.0"
   },
   "scripts": {
     "test": "mocha"
