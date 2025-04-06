@@ -15,11 +15,9 @@ module.exports = function serveStatic({ urlPrefix, dirPath, indexPages }) {
 
         const fullPath = path.join(dirPath, filePath),
             stats = await promisify(fs.stat)(fullPath).then(stats => stats, () => null)
-        console.log(fullPath)
+
         if (stats && stats.isFile()) {
-
-            await send(ctx, ctx.path, { root: dirPath })
-
+            await send(ctx, filePath, { root: dirPath })
         } else if (stats && stats.isDirectory()) {
 
             if (!indexPages || !indexPages.length) {
